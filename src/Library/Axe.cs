@@ -1,17 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Library
 {
+    /// <summary>
+    /// Representa un item de ataque Arco, aporta
+    /// un valor de daño de ataque del personaje
+    /// </summary>
     public class Axe
     {
-        public int AttackValue {get;}
-
-        public Axe(int attackValue)
+        public int Damage {get; set;}
+        public Axe( int damage)
         {
-            AttackValue = attackValue;
+            this.Damage = damage ;
         }
     }
 }
