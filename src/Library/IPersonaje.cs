@@ -5,6 +5,6 @@ namespace Library {
         int Health {get;}
 
         void Attack( IPersonaje enemy) ;
-        void ReceiveAttack(int amount);
+        
     }
 }
