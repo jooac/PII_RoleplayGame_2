@@ -17,7 +17,16 @@
     ],
     "dotnet.defaultSolution": "ProjectTemplate.sln",
     "github.copilot.enable": {
+<<<<<<< HEAD
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": true,
+        "csharp": true
+=======
         "*": false
+>>>>>>> Archer
     },
     "githubPullRequests.codingAgent.codeLens": false,
 }
