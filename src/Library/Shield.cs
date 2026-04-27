@@ -1,6 +1,6 @@
 using System;
 
-namespace Ucu.Poo.RolePlayGame
+namespace Library
 {
     /// <summary>
     /// Representa un item de defensa Escudo.

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Ucu.Poo.RolePlayGame
+namespace Library
 {
     /// <summary>
     /// Esta clase representa a un personaje "Elfo".
@@ -9,7 +9,7 @@ namespace Ucu.Poo.RolePlayGame
     /// Por este motivo cumple con SRP y Expert.
     /// Además colabora con Dagger y Shield, para atacar y defenderse.
     /// </summary>
-    public class Elve
+    public class Elve : IPersonaje
     {
         private string name;
         public string Name
@@ -39,7 +39,11 @@ namespace Ucu.Poo.RolePlayGame
         {
             get{return this.dagger.Damage;}
         }
-        public void RecieveAttack (int power)
+        public void Cure()
+        {
+            this.Health = 100;
+        }
+        public void ReceiveAttack (int power)
         {
             int remaininDamage = power - this.DefenseValue;
             if (remaininDamage <= 0)
@@ -55,6 +59,10 @@ namespace Ucu.Poo.RolePlayGame
             {
                 this.Health = 0;
             }
+        }
+        public void ReceiveAttack(IPersonaje enemy)
+        {
+            
         }
     }
 }
