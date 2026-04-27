@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace Library
 {
     /// <summary>
-    /// Esta clase representa a un personaje "Arquero".
+    /// Esta clase representa a un personaje "Enano".
     /// Tiene la responsabilidad de tener nombre, vida y metodos de ataque/defensa.
     /// Por este motivo cumple con SRP y Expert.
     /// Además colabora con Dagger y Shield, para atacar y defenderse.
