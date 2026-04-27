@@ -1,0 +1,5 @@
+PROJECT_NAME           = "PII Roleplay Game"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = src
+RECURSIVE              = YES
+GENERATE_LATEX         = NO
