@@ -15,6 +15,11 @@ namespace Library
         public int DefenseValue{get{ return SpellsBook.DefenseValue + Staff.DefenseValue;}}
         public int Health{get; private set;}
 
+        public void RecieveAttack(IPersonaje enemy)
+        {
+            ReceiveAttack(enemy);
+        }
+
         public Wizard(string name)
         {
             Name = name;
@@ -24,10 +29,11 @@ namespace Library
             Staff = new Staff();
         }
 
-        public void ReceiveAttack(int power)
+        public void ReceiveAttack(IPersonaje enemy)
         {
-            Health -= power;
+            ReceiveAttack(enemy);
         }
+        
 
         public void Cure()
         {

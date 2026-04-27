@@ -4,7 +4,7 @@ namespace Library {
         string Name {get;}
         int Health {get;}
 
-        void Attack( IPersonaje enemy) ;
+        void RecieveAttack(IPersonaje enemy);
         
     }
 }
