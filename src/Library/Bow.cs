@@ -1,18 +1,15 @@
-using System;
-using System.Dynamic;
-
-namespace Ucu.Poo.RolePlayGame
+namespace Library
 {
+    /// <summary>
+    /// Representa un item de ataque Arco, aporta
+    /// un valor de daño de ataque del personaje
+    /// </summary>
     public class Bow
     {
-        private int attack;
-        public int Attack 
+        public int Damage {get; set;}
+        public Bow( int damage)
         {
-            get{return attack;} set{attack = value;}
-        }
-        public Bow (int attack)
-        {
-            this.Attack = attack;
+            this.Damage = damage ;
         }
     }
 }

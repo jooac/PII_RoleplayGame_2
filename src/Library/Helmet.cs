@@ -1,8 +1,11 @@
 using System;
-using System.Dynamic;
 
-namespace Ucu.Poo.RolePlayGame
+namespace Library
 {
+    /// <summary>
+    /// Representa un item de defensa Casco.
+    /// Tiene un valor de defensa para reducir el daño recibido.
+    /// </summary>
     public class Helmet
     {
         private int defense;
@@ -10,9 +13,17 @@ namespace Ucu.Poo.RolePlayGame
         {
             get{return defense;} set{defense = value;}
         }
-        public Helmet (int defense)
+        public Helmet(int defense)
         {
-            this.Defense = defense;
+            this.Defense = defense ;
+        }
+        public void ReduceDefense (int amount)
+        {
+            this.defense -= amount ;
+            if (this.defense < 0)
+            {
+                this.defense = 0;
+            }
         }
     }
 }
