@@ -27,7 +27,15 @@ namespace Library
 
         public void ReceiveAttack(int power)
         {
-            Health -= power;
+            int remainingDamage = power - DefenseValue;
+            if (remainingDamage > 0)
+            {
+                Health -= remainingDamage;
+                if (Health < 0)
+                {
+                    Health = 0;
+                }
+            }
         }
 
         public void Cure()
