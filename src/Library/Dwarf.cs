@@ -9,7 +9,7 @@ namespace Library
     /// Por este motivo cumple con SRP y Expert.
     /// Además colabora con Dagger y Shield, para atacar y defenderse.
     /// </summary>
-    public class Dwarf
+    public class Dwarf : IPersonaje
     {
         private string name;
         public string Name
@@ -39,22 +39,26 @@ namespace Library
         {
             get{return this.axe.Damage;}
         }
-        public void ReceiveAttack (int power)
+        public void ReceiveAttack (IPersonaje enemy)
         {
-            int remaininDamage = power - this.DefenseValue;
-            if (remaininDamage <= 0)
-            {
-                this.shield.ReduceDefense(power);
-            }
-            else
-            {
-                this.shield.ReduceDefense(this.DefenseValue); 
-                this.Health -= remaininDamage;
-            }
-            if (this.Health < 0)
-            {
-                this.Health = 0;
-            }
+            // int remaininDamage = power - this.DefenseValue;
+            // if (remaininDamage <= 0)
+            // {
+            //     this.shield.ReduceDefense(power);
+            // }
+            // else
+            // {
+            //     this.shield.ReduceDefense(this.DefenseValue); 
+            //     this.Health -= remaininDamage;
+            // }
+            // if (this.Health < 0)
+            // {
+            //     this.Health = 0;
+            // }
+        }
+        public void Cure()
+        {
+            this.Health = 100;
         }
     }
 }

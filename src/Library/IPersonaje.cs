@@ -3,6 +3,6 @@ namespace Library {
     {
         string Name {get;}
         int Health {get;}
-        void ReceiveAttack(int amount);
+        void ReceiveAttack(IPersonaje enemy);
     }
 }
