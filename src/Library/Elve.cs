@@ -19,7 +19,7 @@ namespace Library
         private int health;
         public int Health
         {
-            get{return health;} set{health = value;}
+            get{return health;}private set{health = value;}
         }
         private Dagger dagger ;
         private Shield shield ;
@@ -49,7 +49,7 @@ namespace Library
             if (remaininDamage <= 0)
             {
                 this.shield.ReduceDefense(power);
-            }
+            }   
             else
             {
                 this.shield.ReduceDefense(this.DefenseValue); 
@@ -62,7 +62,7 @@ namespace Library
         }
         public void ReceiveAttack(IPersonaje enemy)
         {
-            
+            this.ReceiveAttack(enemy.AttackValue);
         }
     }
 }
