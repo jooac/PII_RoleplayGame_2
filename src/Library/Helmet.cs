@@ -8,5 +8,14 @@ namespace Library
         {
             this.DefenseValue = defenseValue;
         }
+
+        public void reduceDefense(int amount)
+        {
+            this.DefenseValue -= amount;
+            if (this.DefenseValue < 0)
+            {
+                this.DefenseValue = 0;
+            }
+        }
     }
 }

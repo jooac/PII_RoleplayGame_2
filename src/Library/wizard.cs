@@ -18,11 +18,11 @@ namespace Library
         public void ReceiveAttack(int power)
         {
             int remainingDamage = power - this.DefenseValue;
-            if (remainingDamage <= 0)
+            if (remainingDamage > 0)
             {
-                this.Health -= power;
-            }   
-            
+                this.Health -= remainingDamage;
+            }
+
             if (this.Health < 0)
             {
                 this.Health = 0;

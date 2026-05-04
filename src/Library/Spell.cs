@@ -9,5 +9,11 @@ namespace Library
     {
         public int AttackValue {get;}
         public int DefenseValue {get;}
+
+        public Spell(string name, int power)
+        {
+            this.AttackValue = power;
+            this.DefenseValue = power / 2; // El valor de defensa es la mitad del valor de ataque
+        }
     }
 }

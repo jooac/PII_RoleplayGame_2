@@ -33,7 +33,7 @@ namespace Library
         }
         public int DefenseValue
         {
-            get{return this.helmet.Defense;}
+            get{return this.helmet.DefenseValue;}
         }
         public int AttackValue
         {
@@ -44,11 +44,11 @@ namespace Library
             int remainingDamage = power - this.DefenseValue;
             if (remainingDamage <= 0)
             {
-                this.helmet.ReduceDefense(power);
+                this.helmet.reduceDefense(power);
             }   
             else
             {
-                this.helmet.ReduceDefense(this.DefenseValue); 
+                this.helmet.reduceDefense(this.DefenseValue); 
                 this.Health -= remainingDamage;
             }
             if (this.Health < 0)
