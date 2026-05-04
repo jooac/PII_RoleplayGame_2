@@ -15,9 +15,18 @@ namespace Library
         public int DefenseValue{get{ return SpellsBook.DefenseValue + Staff.DefenseValue;}}
         public int Health{get; private set;}
 
-        public void RecieveAttack(IPersonaje enemy)
+        public void ReceiveAttack(int power)
         {
-            ReceiveAttack(enemy);
+            int remainingDamage = power - this.DefenseValue;
+            if (remainingDamage <= 0)
+            {
+                this.Health -= power;
+            }   
+            
+            if (this.Health < 0)
+            {
+                this.Health = 0;
+            }
         }
 
         public Wizard(string name)
@@ -31,13 +40,13 @@ namespace Library
 
         public void ReceiveAttack(IPersonaje enemy)
         {
-            ReceiveAttack(enemy);
+            this.ReceiveAttack(enemy.AttackValue);
         }
         
 
         public void Cure()
         {
-            Health = 100;
+            this.Health = 100;
         }
         
     }
