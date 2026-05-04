@@ -18,19 +18,25 @@
     "dotnet.defaultSolution": "ProjectTemplate.sln",
     "github.copilot.enable": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "*": false
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Wizard
         "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
         "python": true,
         "csharp": true
+<<<<<<< HEAD
 =======
         "*": false
 >>>>>>> Archer
 >>>>>>> Main
+=======
+>>>>>>> Wizard
     },
     "githubPullRequests.codingAgent.codeLens": false,
 }
