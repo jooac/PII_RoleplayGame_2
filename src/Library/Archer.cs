@@ -39,26 +39,26 @@ namespace Library
         {
             get{return this.bow.Damage;}
         }
-        public void ReceiveAttack (IPersonaje enemy)
+        public void ReceiveAttack (int power)
         {
-            // int remaininDamage = power - this.DefenseValue;
-            // if (remaininDamage <= 0)
-            // {
-            //     this.helmet.ReduceDefense(power);
-            // }
-            // else
-            // {
-            //     this.helmet.ReduceDefense(this.DefenseValue); 
-            //     this.Health -= remaininDamage;
-            // }
-            // if (this.Health < 0)
-            // {
-            //     this.Health = 0;
-            // }
+            int remainingDamage = power - this.DefenseValue;
+            if (remainingDamage <= 0)
+            {
+                this.helmet.ReduceDefense(power);
+            }   
+            else
+            {
+                this.helmet.ReduceDefense(this.DefenseValue); 
+                this.Health -= remainingDamage;
+            }
+            if (this.Health < 0)
+            {
+                this.Health = 0;
+            }
         }
-        public void Cure()
+        public void ReceiveAttack(IPersonaje enemy)
         {
-            this.Health = 100;
+            this.ReceiveAttack(enemy.AttackValue);
         }
     }
 }
