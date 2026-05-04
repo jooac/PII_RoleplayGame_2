@@ -9,7 +9,7 @@ namespace Library
     /// Por este motivo cumple con SRP y Expert.
     /// Además colabora con Dagger y Shield, para atacar y defenderse.
     /// </summary>
-    public class Elve
+    public class Elve : IPersonaje
     {
         private string name;
         public string Name
@@ -19,7 +19,7 @@ namespace Library
         private int health;
         public int Health
         {
-            get{return health;} set{health = value;}
+            get{return health;}private set{health = value;}
         }
         private Dagger dagger ;
         private Shield shield ;
@@ -39,22 +39,30 @@ namespace Library
         {
             get{return this.dagger.Damage;}
         }
+        public void Cure()
+        {
+            this.Health = 100;
+        }
         public void ReceiveAttack (int power)
         {
-            int remaininDamage = power - this.DefenseValue;
-            if (remaininDamage <= 0)
+            int remainingDamage = power - this.DefenseValue;
+            if (remainingDamage <= 0)
             {
                 this.shield.ReduceDefense(power);
-            }
+            }   
             else
             {
                 this.shield.ReduceDefense(this.DefenseValue); 
-                this.Health -= remaininDamage;
+                this.Health -= remainingDamage;
             }
             if (this.Health < 0)
             {
                 this.Health = 0;
             }
+        }
+        public void ReceiveAttack(IPersonaje enemy)
+        {
+            this.ReceiveAttack(enemy.AttackValue);
         }
     }
 }

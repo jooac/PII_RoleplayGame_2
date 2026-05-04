@@ -18,6 +18,9 @@
     "dotnet.defaultSolution": "ProjectTemplate.sln",
     "github.copilot.enable": {
 <<<<<<< HEAD
+        "*": false
+=======
+<<<<<<< HEAD
         "*": true,
         "plaintext": false,
         "markdown": false,
@@ -27,6 +30,7 @@
 =======
         "*": false
 >>>>>>> Archer
+>>>>>>> Main
     },
     "githubPullRequests.codingAgent.codeLens": false,
 }
