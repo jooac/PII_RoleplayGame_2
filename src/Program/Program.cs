@@ -23,11 +23,8 @@ namespace Ucu.Poo.RolePlayGame
             Dwarf dwarf1 = new Dwarf("Joaco");
             Shield shield1 = new Shield(10);
             Axe axe1 = new Axe(15);
-            Spell spell1 = new Spell(20, 5);
-            Staff staff1 = new Staff(10, 10);
             SpellsBook spellsBook1 = new SpellsBook();
-            spell1 = new Spell(20, 5);
-            staff1 = new Staff(10, 10);
+    
             
             Console.WriteLine($"El mago {wizard1.Name} tiene {wizard1.Health} puntos de vida.");
             Console.WriteLine($"El elfo {elve1.Name} tiene {elve1.Health} puntos de vida.");
