@@ -45,15 +45,15 @@ namespace Library
         }
         public void ReceiveAttack (int power)
         {
-            int remaininDamage = power - this.DefenseValue;
-            if (remaininDamage <= 0)
+            int remainingDamage = power - this.DefenseValue;
+            if (remainingDamage <= 0)
             {
                 this.shield.ReduceDefense(power);
             }   
             else
             {
                 this.shield.ReduceDefense(this.DefenseValue); 
-                this.Health -= remaininDamage;
+                this.Health -= remainingDamage;
             }
             if (this.Health < 0)
             {
