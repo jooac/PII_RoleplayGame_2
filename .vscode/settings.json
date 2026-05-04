@@ -19,6 +19,7 @@
     "github.copilot.enable": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "*": false
 =======
 <<<<<<< HEAD
@@ -37,6 +38,9 @@
 >>>>>>> Main
 =======
 >>>>>>> Wizard
+=======
+        "*": false
+>>>>>>> Dwarf
     },
     "githubPullRequests.codingAgent.codeLens": false,
 }
